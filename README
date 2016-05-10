@@ -1,0 +1,24 @@
+Author:
+Kelly Scanlon
+
+Description:
+A program to open and analyze a text file containing web server logs, and print out 
+the remote client IP, and the number of successful requests (status code 200) made 
+by each remote client.
+
+Usage:
+>python parseWebLog.py -i <inputfile>
+-OR-
+>chmod +x parseWebLog.py
+>./parseWebLog.py -i <inputfile>
+
+Assupmtions:
+- Log format is correct, this script only checks for an IP address and a successful
+  HTTP status code of 200, no errors if other fields are incorrect
+- IP address is between 0.0.0.0 and 999.999.999.999. Invalid addresses past 223.255.255.255
+  are still considered correct. (Improvement could be made here) 
+- IP address is available. We do not take - as a valid IP address
+
+References:
+Common Log Format: https://en.wikipedia.org/wiki/Common_Log_Format
+IP addresses: https://en.wikipedia.org/wiki/IP_address
